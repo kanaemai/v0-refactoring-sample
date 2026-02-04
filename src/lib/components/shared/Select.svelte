@@ -31,11 +31,7 @@
 </script>
 
 <div class={cn('relative', className)}>
-	<select
-		class={cn(triggerClass, 'pr-8')}
-		bind:value
-		{...rest}
-	>
+	<select class={cn(triggerClass, 'pr-8')} bind:value {...rest}>
 		{#if placeholder}
 			<option value="" disabled>{placeholder}</option>
 		{/if}
@@ -47,7 +43,7 @@
 			{@render children?.()}
 		{/if}
 	</select>
-	<span class="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none text-muted-foreground">
+	<span class="pointer-events-none absolute top-1/2 right-2 -translate-y-1/2 text-muted-foreground">
 		<ChevronDown class="size-4" />
 	</span>
 </div>

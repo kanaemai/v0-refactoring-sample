@@ -9,12 +9,7 @@
 		[id: string]: unknown;
 	}
 
-	let {
-		class: className = '',
-		checked = false,
-		disabled = false,
-		...rest
-	}: Props = $props();
+	let { class: className = '', checked = false, disabled = false, ...rest }: Props = $props();
 
 	const boxClass = $derived(
 		cn(
@@ -28,13 +23,7 @@
 </script>
 
 <label class="relative inline-flex cursor-pointer">
-	<input
-		type="checkbox"
-		class="sr-only peer"
-		bind:checked
-		{disabled}
-		{...rest}
-	/>
+	<input type="checkbox" class="peer sr-only" bind:checked {disabled} {...rest} />
 	<span class={boxClass} aria-hidden="true">
 		{#if checked}
 			<Check class="size-3.5" />

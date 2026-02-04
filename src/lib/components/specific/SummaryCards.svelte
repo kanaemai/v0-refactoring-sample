@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { FileText, Target, TrendingUp, Wallet } from 'lucide-svelte';
-	import Card from '$lib/components/ui/Card.svelte';
+	import Card from '$lib/components/shared/Card.svelte';
 	import type { Property } from '$lib/types';
 
 	interface Props {
@@ -57,13 +57,13 @@
 	]);
 </script>
 
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-	{#each cards as card}
+<div class="mb-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+	{#each cards as card (card.label)}
 		{@const Icon = card.icon}
-		<Card class="p-5 bg-card border border-border">
+		<Card class="border border-border bg-card p-5">
 			<div class="flex items-start justify-between">
 				<div>
-					<p class="text-sm text-muted-foreground mb-2">{card.label}</p>
+					<p class="mb-2 text-sm text-muted-foreground">{card.label}</p>
 					<div class="flex items-baseline gap-1">
 						<span class="text-3xl font-bold {card.valueColor}">
 							{card.value}
@@ -73,8 +73,8 @@
 						{/if}
 					</div>
 				</div>
-				<div class="p-2 rounded-lg bg-muted">
-					<Icon class="w-5 h-5 text-muted-foreground" />
+				<div class="rounded-lg bg-muted p-2">
+					<Icon class="h-5 w-5 text-muted-foreground" />
 				</div>
 			</div>
 		</Card>

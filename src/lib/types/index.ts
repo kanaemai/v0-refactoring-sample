@@ -50,7 +50,14 @@ export const mockProperties: Property[] = [
 		calculationMethod: '指定配分 (Manual)',
 		buildingRatio: 0.45,
 		rentRoll: [
-			{ id: '1', roomNumber: '801', area: 72, currentRent: 180000, estimatedRent: 195000, occupied: true }
+			{
+				id: '1',
+				roomNumber: '801',
+				area: 72,
+				currentRent: 180000,
+				estimatedRent: 195000,
+				occupied: true
+			}
 		]
 	},
 	{
@@ -72,8 +79,22 @@ export const mockProperties: Property[] = [
 		calculationMethod: '指定配分 (Manual)',
 		buildingRatio: 0.5,
 		rentRoll: [
-			{ id: '1', roomNumber: '1201', area: 42, currentRent: 165000, estimatedRent: 175000, occupied: true },
-			{ id: '2', roomNumber: '1202', area: 43, currentRent: 168000, estimatedRent: 178000, occupied: true }
+			{
+				id: '1',
+				roomNumber: '1201',
+				area: 42,
+				currentRent: 165000,
+				estimatedRent: 175000,
+				occupied: true
+			},
+			{
+				id: '2',
+				roomNumber: '1202',
+				area: 43,
+				currentRent: 168000,
+				estimatedRent: 178000,
+				occupied: true
+			}
 		]
 	},
 	{
@@ -95,9 +116,30 @@ export const mockProperties: Property[] = [
 		calculationMethod: '指定配分 (Manual)',
 		buildingRatio: 0.4,
 		rentRoll: [
-			{ id: '1', roomNumber: '101', area: 40, currentRent: 150000, estimatedRent: 160000, occupied: true },
-			{ id: '2', roomNumber: '102', area: 40, currentRent: 150000, estimatedRent: 160000, occupied: true },
-			{ id: '3', roomNumber: '201', area: 50, currentRent: 0, estimatedRent: 200000, occupied: false }
+			{
+				id: '1',
+				roomNumber: '101',
+				area: 40,
+				currentRent: 150000,
+				estimatedRent: 160000,
+				occupied: true
+			},
+			{
+				id: '2',
+				roomNumber: '102',
+				area: 40,
+				currentRent: 150000,
+				estimatedRent: 160000,
+				occupied: true
+			},
+			{
+				id: '3',
+				roomNumber: '201',
+				area: 50,
+				currentRent: 0,
+				estimatedRent: 200000,
+				occupied: false
+			}
 		]
 	},
 	{
@@ -119,7 +161,14 @@ export const mockProperties: Property[] = [
 		calculationMethod: '指定配分 (Manual)',
 		buildingRatio: 0.42,
 		rentRoll: [
-			{ id: '1', roomNumber: '502', area: 65, currentRent: 155000, estimatedRent: 165000, occupied: true }
+			{
+				id: '1',
+				roomNumber: '502',
+				area: 65,
+				currentRent: 155000,
+				estimatedRent: 165000,
+				occupied: true
+			}
 		]
 	},
 	{
@@ -141,7 +190,14 @@ export const mockProperties: Property[] = [
 		calculationMethod: '指定配分 (Manual)',
 		buildingRatio: 0.48,
 		rentRoll: [
-			{ id: '1', roomNumber: '305', area: 55, currentRent: 145000, estimatedRent: 158000, occupied: true }
+			{
+				id: '1',
+				roomNumber: '305',
+				area: 55,
+				currentRent: 145000,
+				estimatedRent: 158000,
+				occupied: true
+			}
 		]
 	},
 	{
@@ -163,7 +219,14 @@ export const mockProperties: Property[] = [
 		calculationMethod: '指定配分 (Manual)',
 		buildingRatio: 0.44,
 		rentRoll: [
-			{ id: '1', roomNumber: '703', area: 75, currentRent: 142000, estimatedRent: 155000, occupied: true }
+			{
+				id: '1',
+				roomNumber: '703',
+				area: 75,
+				currentRent: 142000,
+				estimatedRent: 155000,
+				occupied: true
+			}
 		]
 	},
 	{
@@ -185,7 +248,14 @@ export const mockProperties: Property[] = [
 		calculationMethod: '指定配分 (Manual)',
 		buildingRatio: 0.52,
 		rentRoll: [
-			{ id: '1', roomNumber: '1505', area: 48, currentRent: 138000, estimatedRent: 148000, occupied: true }
+			{
+				id: '1',
+				roomNumber: '1505',
+				area: 48,
+				currentRent: 138000,
+				estimatedRent: 148000,
+				occupied: true
+			}
 		]
 	},
 	{
@@ -207,7 +277,14 @@ export const mockProperties: Property[] = [
 		calculationMethod: '指定配分 (Manual)',
 		buildingRatio: 0.46,
 		rentRoll: [
-			{ id: '1', roomNumber: '908', area: 52, currentRent: 125000, estimatedRent: 138000, occupied: true }
+			{
+				id: '1',
+				roomNumber: '908',
+				area: 52,
+				currentRent: 125000,
+				estimatedRent: 138000,
+				occupied: true
+			}
 		]
 	}
 ];
