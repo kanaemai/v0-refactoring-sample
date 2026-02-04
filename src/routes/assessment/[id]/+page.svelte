@@ -8,7 +8,8 @@
 	import KpiCards, { type CalculatedValues } from '$lib/components/specific/KpiCards.svelte';
 	import IncomeBreakdown from '$lib/components/specific/IncomeBreakdown.svelte';
 	import RentRoll from '$lib/components/specific/RentRoll.svelte';
-	import { mockProperties, type Property, type RentRollItem } from '$lib/types';
+	import type { Property, RentRollItem } from '$lib/types';
+	import { mockProperties } from '$lib/utils/mockProperties';
 
 	const id = $derived($page.params.id);
 
