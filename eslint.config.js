@@ -35,5 +35,12 @@ export default defineConfig(
 				svelteConfig
 			}
 		}
+	},
+	// Button.svelte: 外部 URL (http) は resolve 不可のため、内部リンクのみ resolve() で分岐している
+	{
+		files: ['**/components/shared/Button.svelte'],
+		rules: {
+			'svelte/no-navigation-without-resolve': 'off'
+		}
 	}
 );

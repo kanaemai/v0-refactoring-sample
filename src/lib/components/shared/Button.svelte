@@ -50,12 +50,31 @@
 	const baseClass =
 		"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]";
 	const classes = $derived(cn(baseClass, variantClasses[variant], sizeClasses[size], className));
+	const isExternalHref = $derived(href?.startsWith('http') ?? false);
 </script>
 
 {#if href}
-	<a {href} class={classes} class:pointer-events-none={disabled} aria-disabled={disabled} {...rest}>
-		{@render children?.()}
-	</a>
+	{#if isExternalHref}
+		<a
+			{href}
+			class={classes}
+			class:pointer-events-none={disabled}
+			aria-disabled={disabled}
+			{...rest}
+		>
+			{@render children?.()}
+		</a>
+	{:else}
+		<a
+			{href}
+			class={classes}
+			class:pointer-events-none={disabled}
+			aria-disabled={disabled}
+			{...rest}
+		>
+			{@render children?.()}
+		</a>
+	{/if}
 {:else}
 	<button {type} {disabled} class={classes} data-slot="button" {...rest}>
 		{@render children?.()}

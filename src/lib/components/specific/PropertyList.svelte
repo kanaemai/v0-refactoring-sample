@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { resolve } from '$app/paths';
 	import { ChevronRight, Filter, ArrowUpDown } from 'lucide-svelte';
 	import Button from '$lib/components/shared/Button.svelte';
 	import type { Property, PropertyStatus } from '$lib/types';
@@ -22,7 +23,7 @@
 	};
 
 	function handleRowClick(id: string) {
-		goto(`/assessment/${id}`);
+		goto(resolve(`/assessment/${id}`));
 	}
 </script>
 

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
+	import { resolve } from '$app/paths';
 	import { ClipboardList, LayoutDashboard, Calculator, FileDown, Save } from 'lucide-svelte';
 
 	import Button from '$lib/components/shared/Button.svelte';
@@ -33,7 +34,7 @@
 
 	function handleSave() {
 		// 本来はバックエンドに保存。ここではダッシュボードへ戻す。
-		goto('/');
+		goto(resolve('/'));
 	}
 
 	// KPI計算: $derived（配列/計算ロジックを runes に移植）
@@ -99,7 +100,11 @@
 			</div>
 
 			<div class="flex items-center gap-4">
-				<Button variant="ghost" class="gap-2 text-muted-foreground" onclick={() => goto('/')}>
+				<Button
+					variant="ghost"
+					class="gap-2 text-muted-foreground"
+					onclick={() => goto(resolve('/'))}
+				>
 					<LayoutDashboard class="h-4 w-4" />
 					Dashboard
 				</Button>

@@ -1,11 +1,5 @@
 <script lang="ts">
 	import { ClipboardList, Bell, User } from 'lucide-svelte';
-
-	interface Props {
-		showBackNav?: boolean;
-	}
-
-	let { showBackNav = false }: Props = $props();
 </script>
 
 <header class="flex items-center justify-between border-b border-border bg-card px-6 py-4">
